@@ -1,0 +1,312 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>Gửi cho bạn đồng hành của tớ</title>
+    <script>
+        //Thay phần kịch bản bằng kịch bản của bạn
+        var kichban = ['Quang ơi, anh có điều muốn nói', 'Anh nói đi'];
+        //Thay loiToTinh bằng lời tỏ tình của bạn
+        var loiToTinh = 'Em có thích anh không ...'
+        //Thay lời xác nhận bằng lời xác nhận của bạn
+        var xacnhan = "Vậy đã được 26 ngày kể từ ngày đầu tiên chúng ta nhắn tin với nhau. Và đã được 21 ngày chúng ta trở thành 'Người đồng hành' của nhau rùi đó. Nhanh nhỉ em ha";
+        var xacnhan2 = "Anh chỉ muốn chúc em sinh nhật vui vẻ và valentine hạnh phúc nha. Hãy tự tin hơn để theo đuổi mong ước lớn nhất của em nè. Anh sẽ đồng hành cùng em trên chặng đường dài phía trước, dù biết rằng chặng đường này đầy khó khăn và gian nan. Nhưng khi chúng ta có nhau thì chúng ta có thể vượt qua hết được mọi thứ";
+        var xacnhan3 = "Hãy trở thành phiên bản tốt nhất của em nha, anh vẫn đồng hành cùng em dù có khó khăn gì xảy ra";
+        var xacnhan4 = "Anh biết là anh cũng có nhiều điểm chưa tốt, đôi khi cũng làm em buồn nhiều. Nhưng nếu anh có gì không tốt hãy nói với anh để anh thay đổi nha. Và hãy nhớ rằng anh vẫn mãi yêu em nè";
+        var xacnhan5 = "Gửi người tui thương!";
+        var xacnhan6 = "Việt Anh";
+        //Tốc độ in chữ ra
+        var tocDo = 0;
+        //Khi chọn Không thì sẽ thông báo ra:
+        var khiChonKhong = 'Không được chọn cái này, chọn cái kia đi!'
+    </script>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+        .btn {
+            align-self: center;
+            background-color: #fff;
+            background-image: none;
+            background-position: 0 90%;
+            background-repeat: repeat no-repeat;
+            background-size: 4px 3px;
+            border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+            border-style: solid;
+            border-width: 2px;
+            box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+            box-sizing: border-box;
+            color: #41403e;
+            display: inline-block;
+            font-family: Neucha, sans-serif;
+            font-size: 1rem;
+            line-height: 23px;
+            outline: none;
+            padding: .75rem;
+            text-decoration: none;
+            transition: all 235ms ease-in-out;
+            border-bottom-left-radius: 15px 255px;
+            border-bottom-right-radius: 225px 15px;
+            border-top-left-radius: 255px 15px;
+            border-top-right-radius: 15px 225px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+        .button-55 {
+            align-self: center;
+            background-color: #fff;
+            background-image: none;
+            background-position: 0 90%;
+            background-repeat: repeat no-repeat;
+            background-size: 4px 3px;
+            border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+            border-style: solid;
+            border-width: 2px;
+            box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+            box-sizing: border-box;
+            color: #41403e;
+            cursor: pointer;
+            display: inline-block;
+            font-family: Neucha, sans-serif;
+            font-size: 1rem;
+            line-height: 23px;
+            outline: none;
+            padding: .75rem;
+            text-decoration: none;
+            transition: all 235ms ease-in-out;
+            border-bottom-left-radius: 15px 255px;
+            border-bottom-right-radius: 225px 15px;
+            border-top-left-radius: 255px 15px;
+            border-top-right-radius: 15px 225px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+        .button-55:hover {
+            box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+            transform: translate3d(0, 2px, 0);
+        }
+        .button-55:focus {
+            box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #ffb6ba;">
+    <div id="kichban" style="width: 100%;display: flex;justify-content: center;">
+        <div id="ques"
+            style="margin-top:10rem;padding: 20px;box-shadow: rgba(42, 42, 43, 0.2) 0px 7px 29px 0px;width:35rem;background-color: #bbd1ff;"
+            class="btn">
+            <h1 id="titleKichBan"></h1>
+            <div class="ans" style="display: flex;justify-content: space-evenly;">
+                <a id="ansKichBan" class="button1" onclick="next()" style="transition: 1s;">
+
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="mainQues" style="transform: translateY(-100rem);width: 100%;display: flex;justify-content: center;">
+        <div id="ques"
+            style="margin-top:10rem;padding: 20px;box-shadow: rgba(42, 42, 43, 0.2) 0px 7px 29px 0px;width:30rem;background-color: #bbd1ff;"
+            class="btn">
+            <h1 id="loiToTinh"></h1>
+            <div class="ans" style="display: flex;justify-content: space-evenly;">
+                <a id="hate" class="button1" onclick="hate()" style="transition: 1s;">
+                    <button class="button-55" role="button">Không đâu</button>
+                </a>
+                <a id="start" class="button1" onclick="typeWriter()">
+                    <button class="button-55" role="button">Có ạ</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="a" style="margin:0 10rem;">
+        <h1 id="main" class="btn" class="hidden"></h1>
+        <div id="result"></div>
+        <div id="linkToFB" style="display:none"></div>
+    </div>
+
+    <div id="xacNhan2" style="display:none; margin:0 10rem;">
+        <h1 id="main2" class="btn" class="hidden"></h1>
+        <div id="result2"></div>
+        <div id="linkToFB2" style="display:none"></div>
+    </div>
+
+    <div id="xacNhan3" style="display:none; margin:0 10rem;">
+        <h1 id="main3" class="btn" class="hidden"></h1>
+        <div id="result3"></div>
+        <div id="linkToFB3" style="display:none"></div>
+    </div>
+
+    <div id="xacNhan4" style="display:none; margin:0 10rem;">
+        <h1 id="main4" class="btn" class="hidden"></h1>
+        <div id="result4"></div>
+        <div id="linkToFB4" style="display:none"></div>
+    </div>
+
+    <div id="xacNhan5" style="display:none; margin:0 40rem;">
+        <h1 id="main5" class="btn" class="hidden"></h1>
+        <div id="result5"></div>
+        <div id="linkToFB5" style="display:none"></div>
+    </div>
+
+    <div id="xacNhan6" style="display:none; margin:0 40rem;">
+        <h1 id="main6" class="btn" class="hidden"></h1>
+        <div id="result6"></div>
+        <div id="linkToFB6" style="display:none"></div>
+    </div>
+    
+    <script>
+        document.getElementById("result").style.width = "fit-content"
+        document.getElementById("result").style.display = "none"
+
+        var i = 0;
+        var l = 0, k = 0;
+
+        function typeKichban() {
+
+            // document.getElementById("start").style.display="none"
+            if (l < kichban[0].length) {
+                document.getElementById("titleKichBan").innerHTML += kichban[0].charAt(l);
+                l++;
+                setTimeout(typeKichban, 50);
+            } else {
+                setTimeout(() => {
+                    document.getElementById("ansKichBan").innerHTML = `<button class="button-55" role="button">${kichban[1]}</button>`
+                }, 50);
+            }
+        }
+        typeKichban()
+        document.getElementById("ansKichBan").onmousedown = () => { i = 0; k += 1; l = 0; document.getElementById("titleKichBan").innerHTML = ""; next() }
+        function next() {
+            document.getElementById("kichban").style.transition = "2s";
+            document.getElementById("kichban").style.transform = "translateY(-100rem)";
+            setTimeout(() => {
+                document.getElementById("mainQues").style.transform = "translateY(-20rem)";
+            }, 1000);
+            setTimeout(() => {
+                typer();
+            }, 1000);
+        }
+
+        function hate() {
+            alert(khiChonKhong)
+        }
+        var n = 0;
+        function typer() {
+            // document.getElementById("start").style.display="none"
+            if (n < loiToTinh.length) {
+                document.getElementById("loiToTinh").innerHTML += loiToTinh.charAt(n);
+                n++;
+                setTimeout(typer, 50);
+            }
+        }
+
+        function typeWriter() {
+            document.getElementById("hate").style.display = "none"
+            document.getElementById("ques").style.display = "none"
+            document.getElementById("mainQues").style.display = "none"
+            document.getElementById("main").classList.remove("hidden")
+            document.getElementById("ques").style.marginTop = "0"
+            if (i < xacnhan.length) {
+                document.getElementById("main").innerHTML += xacnhan.charAt(i);
+                i++;
+                setTimeout(typeWriter, tocDo);
+            }
+            else{
+                setTimeout(() => {
+                document.getElementById("xacNhan2").style.display = "block";
+                typeWriter2();}, 1500); 
+            } 
+        }
+        var j = 0;
+        function typeWriter2() {
+            if (j < xacnhan2.length) {
+                document.getElementById("main2").innerHTML += xacnhan2.charAt(j);
+                j++;
+                setTimeout(typeWriter2, tocDo);
+            }
+            else{
+                document.getElementById("hate").onmouseover = () => {
+                document.getElementById("hate").style.transform = `translate(${(Math.floor(Math.random() * 4) ? Math.floor(Math.random() * 4) : 1) * 100}px,${Math.floor(Math.random() * 4) * 100}px)`
+            }
+                setTimeout(() => {
+                document.getElementById("xacNhan3").style.display = "block";
+                typeWriter3();}, 1500); 
+            }
+        }
+        var a = 0;
+        function typeWriter3() {
+            if (a < xacnhan3.length) {
+                document.getElementById("main3").innerHTML += xacnhan3.charAt(a);
+                a++;
+                setTimeout(typeWriter3, tocDo);
+            }
+            else{
+                setTimeout(() => {
+                document.getElementById("xacNhan4").style.display = "block";
+                typeWriter4();}, 1500);
+            }  
+        }
+
+        var b = 0;
+        function typeWriter4() {
+            if (b < xacnhan4.length) {
+                document.getElementById("main4").innerHTML += xacnhan4.charAt(b);
+                b++;
+                setTimeout(typeWriter4, tocDo);
+            } else {
+                setTimeout(() => {
+                    document.getElementById("xacNhan5").style.display = "block";
+                    typeWriter5();
+                }, 1500);
+            }
+        }
+
+        var d = 0;
+        function typeWriter5() {
+            if (d < xacnhan4.length) {
+                document.getElementById("main5").innerHTML += xacnhan5.charAt(d);
+                d++;
+                setTimeout(typeWriter5, tocDo);
+            } else {
+                setTimeout(() => {
+                    document.getElementById("xacNhan6").style.display = "block";
+                    typeWriter6();
+                }, 1500);
+            }
+        }
+
+        var c = 0;
+        function typeWriter6() {
+            if (c < xacnhan6.length) {
+                document.getElementById("main6").innerHTML += xacnhan6.charAt(c);
+                c++;
+                setTimeout(typeWriter6, tocDo);
+            } else {
+        setTimeout(() => {
+            // Thêm nút để chuyển hướng
+            const button = document.createElement("button");
+            button.className = "button-55";
+            button.textContent = "Bấm típ vô đây đi";
+                button.style.marginTop = "20px"; // Khoảng cách trên
+                button.style.textAlign = "left"
+                button.style.display = "block"; // Hiển thị dạng khối để căn giữa
+                
+            button.onclick = function () {
+                window.location.href = "index.html"; };
+                document.getElementById("xacNhan6").appendChild(button);
+                }, 1500);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
